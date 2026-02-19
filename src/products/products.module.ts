@@ -8,5 +8,6 @@ import { Product } from './products.entity';
   imports: [TypeOrmModule.forFeature([Product])], //this helps in repository injection in service files, something which spingboot does with out this 
   controllers: [ProductsController],
   providers: [ProductsService],
+  exports: [ProductsService], //cross module communication
 })
 export class ProductsModule {}
